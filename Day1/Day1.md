@@ -18,7 +18,8 @@ class HelloWorld
         Console.WriteLine("Hello, world!!");
     }
 }
-
+```
+```csharp
 2 Program to Read a Number and Display It
 
 using System;
@@ -33,7 +34,8 @@ class HelloWorld
     }
 }
 
-
+```
+```csharp
 3 Program to Read a Floating Point Number
 
 using System;
@@ -47,16 +49,19 @@ class HelloWorld
         Console.WriteLine($"The float number u entered is : {fl}");
     }
 }
+```
 
 
 Q4) write a C# to read a string from user and display it
+```csharp
 string name=string.Empty;
 name=Console.ReadLine();
 Console.WriteLine($"Enter your name : {name}");
 
+```
 
 5 Program to Perform All Arithmetic Operations
-
+```csharp
 class Calculator
 {
     int number1;
@@ -113,19 +118,22 @@ class Calculator
         Console.WriteLine($"Modulus is {res}");
     }
 }
+```
 
 6 Program to Find Area of Circle
-
+```
+```csharp
 float area=0.0f;
 float r=0;
 Console.WriteLine("Enter the radius of circle:");
 r=Convert.ToSingle(Console.ReadLine());
 area=(22/7)*r*r;
 Console.WriteLine($"The area of circle is : {area}");
+```
 
 
 7  Program to check even or odd
-
+```csharp
 int n;
 Console.WriteLine("Enter a number:");
 n=Convert.ToInt32(Console.ReadLine());
@@ -137,9 +145,9 @@ else
 {
     Console.WriteLine("The number is odd");
 }
-
+```
 8 Program to find greatest of two numbers
-
+```csharp
 int a,b;
 Console.WriteLine("Enter 1 no:");
 a=Convert.ToInt32(Console.ReadLine());
@@ -175,9 +183,9 @@ else
 {
     Console.WriteLine($"The num is negative {num}");
 }
-
+```
 10 Program to check gretesst of 3 numbers
-
+```csharp
 int a,b,c;
 Console.WriteLine("Enter the first num:");
 a=Convert.ToInt32(Console.ReadLine());
@@ -198,9 +206,9 @@ else
     Console.WriteLine($"{c} is greatest");
 }
 
-
+```
 Program to check vowels using switch case
-
+```csharp
 char a;
 a=Convert.ToChar(Console.ReadLine());
 switch(a)
@@ -221,10 +229,10 @@ switch(a)
         Console.WriteLine($" {a} is Consonant");
         break;
 }
-
+```
 
 String Operations (uppercase and length)
-
+```csharp
 string st=string.Empty;
 int length=0;
 Console.WriteLine("Enter a string:");
