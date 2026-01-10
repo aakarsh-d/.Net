@@ -1,4 +1,4 @@
-Day - 08 (Saturday)
+// Day - 08 (Saturday)
 // class CreatorStats
 // {
 //     public string CreatorName
