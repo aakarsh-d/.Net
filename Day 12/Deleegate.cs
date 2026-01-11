@@ -107,6 +107,6 @@
 //     }
 // }
 
-Comparison<int> sortDescending = (a,b) => a.CompareTo(b);
-Console.WriteLine(sortDescending('a','b'));
-Console.WriteLine(sortDescending(5,10));
+// Comparison<int> sortDescending = (a,b) => a.CompareTo(b);
+// Console.WriteLine(sortDescending('a','b'));
+// Console.WriteLine(sortDescending(5,10));

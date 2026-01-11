@@ -27,15 +27,13 @@ class Program
         if (chocolate.Flavour == "Dark")
             discountPercentage = 18;
         else if (chocolate.Flavour == "Milk")
-            discountPercentage = 12;
-        else if (chocolate.Flavour == "White")
-            discountPercentage = 6;
+            discountPercentage=12;
+        else if (chocolate.Flavour=="White")
+            discountPercentage=6;
 
-        chocolate.TotalPrice = chocolate.Quantity * chocolate.PricePerUnit;
+        chocolate.TotalPrice=chocolate.Quantity*chocolate.PricePerUnit;
 
-        chocolate.DiscountedPrice =
-            chocolate.TotalPrice -
-            (chocolate.TotalPrice * discountPercentage / 100);
+        chocolate.DiscountedPrice=chocolate.TotalPrice - (chocolate.TotalPrice * discountPercentage/100);
 
         return chocolate;
     }

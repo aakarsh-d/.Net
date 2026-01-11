@@ -10,7 +10,7 @@ sealed class SecurityModule
     }
 }
 
-// ---------------- BASE POLICY ----------------
+// BASE POLICY ----------------
 abstract class InsurancePolicy
 {
     public int PolicyNum { get; init; }
