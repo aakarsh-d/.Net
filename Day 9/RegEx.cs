@@ -85,7 +85,7 @@ class Program{
 "info@domain.com.au"
 
 };
-    string pattern=@"\bzz                                                                                                                                                                                                                                                                                                                                                      +@[\w.-]+(\.\w{2,})+\b";
+    string pattern=@"\b[\w.-]+@[\w]+\.\w{2,}\b";                                                                                                                                                                                                                                                                                                                                                  +@[\w.-]+(\.\w{2,})+\b";
     foreach (string email in Emails)
         {
             if (Regex.IsMatch(email, pattern))
