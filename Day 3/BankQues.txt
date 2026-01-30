@@ -1,0 +1,477 @@
+Advanced Project Tasks – Integrated Hospital Care Management System (IHCMS)
+
+======================================================================
+
+MODULE STRUCTURE
+
+HospitalSystem
+│
+├── Core
+│ ├── Patient
+│ ├── Doctor
+│ ├── MedicalRecord
+│ ├── Appointment
+│
+├── Services
+│ ├── DiagnosisService
+│ ├── BillingService
+│ ├── InsuranceService
+│
+├── Utilities
+│ ├── InputHelper
+│ ├── CalculationHelper
+│
+└── Program.cs
+
+======================================================================
+
+TASK 1: Core OOP Design (Conceptual Understanding)
+
+Objective
+Understand and map real-world healthcare entities to OOP concepts.
+
+Tasks for Students
+
+Identify and justify the use of:
+
+Classes
+
+Objects
+
+Fields
+
+Methods
+
+Explain how encapsulation is applied to protect patient medical data.
+
+Explain why OOP is suitable for healthcare systems compared to procedural programming.
+
+======================================================================
+
+TASK 2: Patient Class – Data Security Task
+
+Functionality
+Represents a patient and ensures secure handling of personal and medical data.
+
+Mandatory Requirements
+
+A Patient class must exist.
+
+PatientId
+
+Must be initialized only through a constructor
+
+Must be read-only
+
+Must not change after object creation
+
+Name
+
+Must be a public property
+
+Must have both getter and setter
+
+Age
+
+Must be a public property
+
+Must have both getter and setter
+
+medicalHistory
+
+Must be declared as a private field
+
+Must not be accessible directly from outside the class
+
+A default constructor must not be created.
+
+Methods
+
+SetMedicalHistory(string history)
+
+Must store medical history internally
+
+Must not expose the private field
+
+GetMedicalHistory()
+
+Must return the stored medical history
+
+Must not allow modification through this method
+
+Expected Outcome
+
+Patient identity remains immutable
+
+Medical data remains protected using encapsulation
+
+======================================================================
+
+TASK 3: Doctor Class – Static and Readonly Behavior Task
+
+Functionality
+Represents a doctor and tracks the total number of doctors in the hospital.
+
+Mandatory Requirements
+
+Static Member
+
+TotalDoctors
+
+Must be declared as a static integer variable
+
+Must track the total number of doctor objects created
+
+Readonly Member
+
+LicenseNumber
+
+Must be declared as a readonly string
+
+Must be assigned during object creation
+
+Must not be modified afterward
+
+Instance Properties
+
+Name
+
+Public property
+
+Getter and setter
+
+Specialization
+
+Public property
+
+Getter and setter
+
+Static Constructor
+
+Must initialize TotalDoctors
+
+Must execute before any doctor object is created
+
+Instance Constructor
+
+Must accept:
+
+Doctor name
+
+Specialization
+
+License number
+
+Must assign values to:
+
+Name
+
+Specialization
+
+LicenseNumber
+
+Must increment TotalDoctors by exactly 1
+
+Validation Rules
+
+License number must remain immutable
+
+Name and Specialization must be modifiable
+
+Static member must reflect correct doctor count
+
+======================================================================
+
+EXTRA TASK: Inheritance – Cardiologist Class
+
+Requirements
+
+Create a Cardiologist class that inherits from Doctor
+
+Child class constructor must explicitly call parent constructor
+
+Usage
+
+Display static member TotalDoctors using child class
+
+Display non-static doctor details using child object
+
+Expected Outcome
+
+Clear demonstration of inheritance
+
+Correct access to static and instance members
+
+======================================================================
+
+TASK 4: Appointment Class – Method Overloading Task
+
+Functionality
+Schedules consultations between patients and doctors using method overloading.
+
+Mandatory Requirements
+
+Appointment class must exist
+
+Method 1: Basic Scheduling
+
+Public static method: Schedule
+
+Parameters:
+
+Patient p
+
+Doctor d
+
+Displays:
+
+Patient name
+
+Doctor name
+
+Method 2: Scheduling with Date and Mode
+
+Overloaded Schedule method
+
+Parameters:
+
+Patient p
+
+Doctor d
+
+DateTime date
+
+string mode (default = "Offline")
+
+Displays:
+
+Appointment date
+
+Consultation mode
+
+Strict Constraints
+
+Only two Schedule methods allowed
+
+No instance-level methods
+
+Must be callable without object creation
+
+Expected Outcome
+
+Correct method overloading
+
+Proper default parameter usage
+
+======================================================================
+
+TASK 5: Diagnosis Service – Advanced Parameter Task
+
+Class
+
+DiagnosisService
+
+Stateless (no fields)
+
+Method
+
+public static void Evaluate
+
+Parameters (exact order)
+
+in int age
+
+ref string condition
+
+out string riskLevel
+
+params int[] testScores
+
+Internal Logic
+
+Sum all testScores
+
+Local static function IsCritical(int totalScore)
+
+Returns true if score > 250
+
+Decision Rules
+
+If critical OR age > 60:
+
+condition = "Serious"
+
+riskLevel = "High"
+
+Else:
+
+riskLevel = "Moderate"
+
+Constraints
+
+age must not be modified
+
+riskLevel must always be assigned
+
+No additional Evaluate methods
+
+======================================================================
+
+TASK 6: Billing Class – Object Initializer Task
+
+Class
+
+Bill
+
+Properties
+
+double ConsultationFee
+
+double TestCharges
+
+double RoomCharges
+
+Method
+
+public double Total()
+
+Returns sum of all charges
+
+Object Creation
+
+Must use object initializer syntax only
+
+Constraints
+
+No parameterized constructors
+
+No hardcoded totals
+
+======================================================================
+
+TASK 7: Insurance Service – Coverage Calculation
+
+Class
+
+InsuranceService (stateless)
+
+Method
+
+public static double ApplyCoverage(double billAmount, int coveragePercent)
+
+Calculation
+
+discount = (billAmount * coveragePercent) / 100
+
+return billAmount - discount
+
+Constraints
+
+No stored data
+
+Pure function
+
+======================================================================
+
+TASK 8: Recursion – Hospital Stay Calculation
+
+Method
+
+static int CalculateStayDays(int days)
+
+Logic
+
+If days <= 0 → return 0
+
+Else → return 1 + CalculateStayDays(days - 1)
+
+Constraints
+
+No loops
+
+Only recursion
+
+======================================================================
+
+TASK 9: Input Validation – Age Parsing
+
+Class
+
+InputHelper
+
+Method
+
+public static int ReadAge(string input)
+
+Rules
+
+Use TryParse
+
+If valid → return age
+
+If invalid → throw exception with message "Invalid age input"
+
+Constraints
+
+No default values
+
+No I/O operations
+
+======================================================================
+
+TASK 10: System Initialization – Static Constructor
+
+Class
+
+HospitalSystem
+
+Constant
+
+const string HospitalName
+
+Static Constructor
+
+Displays system boot message
+
+Executes before Main()
+
+Runs only once
+
+======================================================================
+
+TASK 11: Main Program Flow – End-to-End Execution
+
+Steps
+
+Create Patient
+
+Set medical history via method
+
+Create Doctor
+
+Schedule appointment (Online, current date)
+
+Perform diagnosis evaluation
+
+Display condition and risk level
+
+Create Bill using object initializer
+
+Calculate total bill
+
+Apply insurance coverage
+
+Display final payable amount
+
+Error Handling
+
+On any error, display exactly:
+Invalid Input
+
+Constraints
+
+No business logic in Main
+
+All operations via method calls
+
+======================================================================
