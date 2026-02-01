@@ -21,3 +21,24 @@
 // c.Start();   // inherited method
 // c.Drive();   // own method
 // }
+
+class Vehicle
+{
+    public void Horn(){
+    Console.WriteLine("Beep!BEEP!");
+    }
+}
+class Car : Vehicle
+{
+    public void drive()
+    {
+        Console.WriteLine("Driving");
+    }
+}
+class Program{
+static void Main(){
+Car c= new Car();
+c.Horn();
+c.drive();
+}
+}

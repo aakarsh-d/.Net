@@ -28,7 +28,7 @@
 //     }
 // }
 
-//Properties Implementation
+// Properties Implementation
 
 
 // PART A: Auto-Implemented Property
@@ -70,13 +70,21 @@
 
 
 // using System;
-// class Student
+// public class Student
 // {
 //     private string name;
 //     private int age;
 //     private int marks;
 //     private string password;
 //     public int studentId{get;set;}
+//     public int RegistrationNo{get;private set;}
+//     public int AdmissionYear{get;init;}
+//     public double Percentage=>(marks/100.0)*100;
+
+//     public Student(int regno)
+//     {
+//         RegistrationNo=regno;
+//     }
 //     public string Name
 //     {
 //         get{return name;}
@@ -104,4 +112,28 @@
 //     // private int result{get }
 //     // private string password{ set {password=value;}}
 
+// }
+// class Program
+// {
+//     static void Main(){
+//     Student s=new Student(5001)
+//     {
+//         AdmissionYear=2015
+//     };
+//     s.Name="Aakarsh";
+//     s.studentId=123;
+//     s.Age=12;
+//     s.Marks=85;
+//     s.Password="Hello";
+//     Console.WriteLine("\nName:" +s.Name);
+//     Console.WriteLine("\nAge:" +s.Age);
+//     Console.WriteLine("\nMarks:" +s.Marks);
+//     Console.WriteLine("\nResult:" +s.Result);
+//     Console.WriteLine("\nAdmission Year: " +s.AdmissionYear);
+//     // Console.WriteLine("\nPassword:" +s.Password); // will not work cuz pvt
+//     Console.WriteLine("\nStudent Id:" +s.studentId);
+//     Console.WriteLine("\nReg No:" +s.RegistrationNo);
+//     Console.WriteLine("\nPercentage:" +s.Percentage);
+
+//     }
 // }
