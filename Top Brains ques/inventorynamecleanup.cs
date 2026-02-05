@@ -1,33 +1,32 @@
-#include <bits/stdc++.h>
-using namespace std;
+using System;
+using System.Text;
+using System.Globalization;
 
-int main()
+class Program
 {
-    string s;
-    getline(cin, s);
-
-    string t = "";
-    for (int i = 0; i < s.size(); i++)
-        if (i == 0 || s[i] != s[i - 1])
-            t += s[i];
-
-    stringstream ss(t);
-    string word, result = "";
-
-    while (ss >> word)
+    static string CleanInventoryName(string s)
     {
-        for (int i = 0; i < word.size(); i++)
+        if (string.IsNullOrEmpty(s))
+            return s;
+        StringBuilder sb = new StringBuilder();
+        sb.Append(s[0]);
+        for (int i = 1; i < s.Length; i++)
         {
-            if (i == 0)
-                word[i] = toupper(word[i]);
-            else
-                word[i] = tolower(word[i]);
+            if (s[i] != s[i - 1])
+                sb.Append(s[i]);
         }
-        if (!result.empty())
-            result += " ";
-        result += word;
+        string cl = sb.ToString();
+        string[] words = cl.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        for (int i=0;i<words.Length;i++)
+        {
+            string w=words[i].ToLower();
+            words[i]=char.ToUpper(w[0]) + w.Substring(1);
+        }
+        return string.Join(" ",words);
     }
-
-    cout << result;
-    return 0;
+    static void Main()
+    {
+        string input=" llapppptop bag ";
+        Console.WriteLine(CleanInventoryName(input));
+    }
 }
