@@ -113,26 +113,26 @@
                                     //     It only declares a contract
 
 
-interface IPrintable
-{
-    void Print();
-}
+// interface IPrintable
+// {
+//     void Print();
+// }
 
-interface IScannable
-{
-    void Scan();
-}
+// interface IScannable
+// {
+//     void Scan();
+// }
 
-class Machine : IPrintable, IScannable
-{
-    public void Print()
-    {
-        Console.WriteLine("Printing");
-    }
+// class Machine : IPrintable, IScannable
+// {
+//     public void Print()
+//     {
+//         Console.WriteLine("Printing");
+//     }
 
-    public void Scan()
-    {
-        Console.WriteLine("Scanning");
-    }
+//     public void Scan()
+//     {
+//         Console.WriteLine("Scanning");
+//     }
     
-}
+// }

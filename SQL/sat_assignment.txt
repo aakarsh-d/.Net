@@ -1,0 +1,180 @@
+Question 1 – Normalization (Foundation)
+
+You are given the following table used by a legacy application:
+
+EmployeeSalesRaw
+----------------------------------------------------
+EmpId
+EmpName
+Department
+Email
+SaleMonth
+SaleYear
+SaleAmount
+
+
+Tasks:
+
+Identify normalization issues in the above table.
+
+Normalize the structure up to 3NF.
+
+Create appropriate tables with:
+
+Primary keys
+
+Foreign key relationships
+
+Tables should at least include: Employee, Department, Sales.
+
+Question 2 – ALTER TABLE (Business Change Request)
+
+After reviewing Question 1, the business says:
+
+“We want to track employee performance points.”
+
+Tasks:
+
+Use ALTER TABLE to add a column called BonusPoints to the Employee table.
+
+Set default value as 0.
+
+⚠️ This question depends on Question 1.
+
+Question 3 – CHECK Constraint (Mid-Requirement Change)
+
+Business rule update:
+
+“Bonus points must always be between 0 and 100.”
+
+Tasks:
+
+Add a CHECK constraint on BonusPoints.
+
+Ensure invalid values cannot be inserted or updated.
+
+Question 4 – INNER JOIN (Mandatory)
+
+Write a query to display:
+
+Employee Name
+
+Department Name
+
+Sale Month
+
+Sale Year
+
+Sale Amount
+
+Only include employees who have made at least one sale.
+
+Use INNER JOIN only.
+
+Question 5 – Date Function (Mandatory)
+
+Write a query to calculate total sales for each employee for the current year.
+
+Requirements:
+
+Use SQL Server date functions
+
+Do not hardcode the year
+
+Question 6 – SUBSTRING and LEFT (Mandatory)
+
+The business wants username suggestions.
+
+Rule:
+
+First 3 characters of employee name
+
+First 2 characters of department name
+
+Append employee ID
+
+Example:
+
+Marimuthu + IT + 101 → MarIT101
+
+
+Tasks:
+
+Generate the username using SUBSTRING and LEFT.
+
+Display Employee Name and Generated Username.
+
+Question 7 – Subquery (Mandatory)
+
+Write a query to find employees whose total sales amount is greater than the average sales amount of all employees.
+
+Rules:
+
+Use a subquery
+
+No joins in the outer query for calculation
+
+Question 8 – UNION (Mandatory)
+
+The business wants a consolidated report:
+
+Employees who made sales above ₹50,000
+
+Employees who made sales below ₹10,000
+
+Tasks:
+
+Write two separate SELECT queries.
+
+Combine them using UNION.
+
+Display: Employee Name, Sale Amount, Category (High / Low)
+
+Question 9 – Trigger (Mandatory, Real-World Logic)
+
+Business rule:
+
+“Whenever a sale is inserted, automatically update BonusPoints.”
+
+Rule:
+
+If SaleAmount ≥ 50,000 → add 10 points
+
+If SaleAmount ≥ 20,000 → add 5 points
+
+Else → no bonus
+
+Tasks:
+
+Create an AFTER INSERT trigger on Sales table.
+
+Ensure BonusPoints updates automatically.
+
+Question 10 – Integrated Validation Query (Final)
+
+Write a single query that shows:
+
+Employee Name
+
+Department
+
+Total Sales
+
+BonusPoints
+
+Performance Grade
+
+A → BonusPoints ≥ 50
+
+B → BonusPoints between 20 and 49
+
+C → Below 20
+
+This question validates whether:
+
+Normalization is correct
+
+Trigger worked
+
+
+--------------------------------------------------------------
