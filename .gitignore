@@ -11,5 +11,11 @@ obj/
 # User-specific files
 *.user
 *.suo
+*.cache
+#.Logs
+#.log
+
+.vs/
+**/.vs/
 
 .fake

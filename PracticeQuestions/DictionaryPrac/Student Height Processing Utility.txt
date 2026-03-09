@@ -1,0 +1,37 @@
+Student Height Processing Utility
+
+A training institute receives temporary student records from an old system stored in a non-generic ArrayList. The data is inconsistent and may contain missing values.
+
+You must write a C# program to clean and display this information.
+
+Requirements
+
+Create a Student class with the following properties:
+
+Id (int)
+
+Name (string)
+
+
+
+Height (float?) → height can be null
+
+AttendancePercentage (float)
+
+In Main(), create a List<Student> and add at least 5 students.
+
+At least one student must have null Height
+
+Use float values such as 165.5, 172.75, etc.
+
+Convert the List<Student> into an ArrayList to simulate legacy storage.
+
+Process the ArrayList and display:
+
+a) If Height is null, display "Height Not Available"
+b) If Height has value, print the height rounded to 1 decimal place
+c) Print the student's name using alternate characters only
+(Example: "Karthikeyan" → "Krhkean")
+d) Display AttendancePercentage only if it is greater than 75.5
+
+Finally, display the total number of students whose attendance was displayed.

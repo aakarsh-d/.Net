@@ -1,0 +1,53 @@
+﻿@model IEnumerable<College.Models.Student>
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Students List</h4>
+        </div>
+        <div class="card-body">
+
+            <div class="mb-3">
+                <a asp-action="Create" class="btn btn-success">
+                    + Add New Student
+                </a>
+            </div>
+
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                        <th>Applied Date</th>
+                        <th style="width:200px;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.FullName</td>
+                            <td>@item.Email</td>
+                            <td>@item.Course</td>
+                            <td>@item.AppliedDate.ToShortDateString()</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id"
+                                   class="btn btn-warning btn-sm">Edit</a>
+                                <a asp-action="IDCard" asp-route-id="@item.Id"
+                                    class="btn btn-dark btn-sm">ID Card</a>
+
+                                <a asp-action="Details" asp-route-id="@item.Id"
+                                   class="btn btn-info btn-sm">Details</a>
+
+                                <a asp-action="Delete" asp-route-id="@item.Id"
+                                   class="btn btn-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

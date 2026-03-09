@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BL">
+      <HintPath>..\..\BL\BL\bin\Debug\net10.0\BL.dll</HintPath>
+    </Reference>
+    <Reference Include="DalList">
+      <HintPath>..\..\DalList\DalList\bin\Debug\net10.0\DalList.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -21,7 +21,7 @@ Runtime polymorphism
 Problem Description
 You are required to build an Insurance System for an insurance company that manages different types of insurance policies. The system must follow real-world business rules and strict object-oriented design principles.
 
-System Requirements
+System Requirements                
 1. Security Module
 Create a sealed class that handles user authentication.
 This class must not be inherited.
