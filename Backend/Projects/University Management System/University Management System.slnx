@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CourseService/CourseService.csproj" />
+  <Project Path="FeeService/FeeService.csproj" />
+  <Project Path="Shared.Contracts/Shared.Contracts.csproj" />
+  <Project Path="StudentService/StudentService.csproj" />
+</Solution>

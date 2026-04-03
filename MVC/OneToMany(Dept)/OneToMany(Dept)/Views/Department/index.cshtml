@@ -1,0 +1,23 @@
+﻿@model IEnumerable<OneToMany_Dept_.Models.Department>
+<table class="table">
+    <tr>
+        <th>Department</th>
+        <th>Students</th>
+    </tr>
+
+    @foreach (var dept in Model)
+    {
+        <tr>
+
+            <td>@dept.DepartmentName</td>
+
+            <td>
+                @foreach (var student in dept.Students)
+                {
+                    <div>@student.Name</div>
+                }
+            </td>
+
+        </tr>
+    }
+</table>

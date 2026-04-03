@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="AggregatorService/AggregatorService.csproj" />
+  <Project Path="CubeService/CubeService.csproj" />
+  <Project Path="Producer/Producer.csproj" />
+  <Project Path="Shared/Shared.csproj" />
+  <Project Path="SquareService/SquareService.csproj" />
+</Solution>

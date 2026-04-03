@@ -1,0 +1,6 @@
+@ViewAsync_WebApi__HostAddress = http://localhost:5062
+
+GET {{ViewAsync_WebApi__HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

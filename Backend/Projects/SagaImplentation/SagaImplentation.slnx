@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="InventoryService/InventoryService.csproj" Id="cbd60865-5e5b-4685-925e-31d2d3b7a5ea" />
+  <Project Path="OrderService/OrderService.csproj" Id="f047ee1f-e23d-47b1-929a-92d5f17b8aa9" />
+  <Project Path="PaymentService/PaymentService.csproj" Id="977f186a-8b10-4abe-9e88-bf02e2e5d42e" />
+</Solution>

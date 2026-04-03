@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/ADO.Net/">
+    <Project Path="D:/ADO.NET/ADO.Net/ADO.Net.csproj" />
+    <Project Path="D:/ADO.NET/Day 1/Day 1.csproj" Id="3121aec9-3176-40c3-9e25-c4f56648e4fd" />
+    <Project Path="D:/ADO.NET/Day 2/Day 2.csproj" Id="8d75c6a4-e812-4242-8097-b7bcfc56cce3" />
+    <Project Path="D:/ADO.NET/Day 3/Day 3.csproj" Id="57119865-04a9-48c2-9e7b-855502552032" />
+    <Project Path="D:/ADO.NET/Day 4/Day 4.csproj" Id="b025b363-00fe-4fae-a6fc-21f7e24f0db8" />
+  </Folder>
+</Solution>

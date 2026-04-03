@@ -1,0 +1,6 @@
+@SquareService_Correlation__HostAddress = http://localhost:5041
+
+GET {{SquareService_Correlation__HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
